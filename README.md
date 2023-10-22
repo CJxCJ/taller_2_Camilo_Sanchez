@@ -389,13 +389,13 @@ print("Los múltiplos de 3 en la lista son:", multiplos)
 
 ## SOLUCION
 ### Codigo sin usar modulo (%)
-
+Se define una funcion donde se la suma de los digitos de el numero de 3 o algun multiplo de este, luego la funcion para encontrar dichos multiplos en los valores ingresados utilizando la primero funcion para comparar cada valor. se pide la lista de numero separados por un espacio, se define la variable multiplos con la funcion para encontrarlos y se imprime.
 
 ````python
 #funcion definiendo los multiplos de 3 previamente
 def multiplo_de_tres(numero):
   suma = sum(int(digito) for digito in str(numero))
-  return suma in {0, 3, 6, 9}
+  return suma in {0, 3, 6, 9, 12, 15, 18, 21}
 
 #funcion para hallar los multplos de 3 (ya definidos) en la lista
 def encontrar_multiplos(lista):
