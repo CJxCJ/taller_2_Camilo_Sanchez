@@ -362,10 +362,11 @@ print(f"{cub:.5f} es la raíz cúbica del menor")
 Suponga que se tiene una lista A con ciertos números enteros. Desarrolle una función que, independientemente de los números que se encuentran en la lista A, tome aquellos números que son múltiplos de 3 y los guarde en una lista nueva, la cual debe ser **retornada** por la función. Implemente la perspectiva de un *patrón de acumulación* y también de *comprensión de listas*. **Desafío:** Si ya lo logró, inténtelo ahora sin utilizar el módulo (%). **Pista:** Un número es multiplo de 3 si la suma de sus dígitos también lo es
 
 ## SOLUCION
-### codigo sin resticciones
-Se define una funcion para saber los multiplos de 3 en una lista, para los numeros en la lista si dicho numero dividido entre 3 tiene un residuo de 0 se agrega a la lista de multiplos y la retorna. Se piden los valores separados por espacios como *STR* luego la variables "valores" sera dicho valor separado y ya como un entero, mu
+### Codigo sin resticciones
+Se define una funcion para saber los multiplos de 3 en una lista, para los numeros en la lista si dicho numero dividido entre 3 tiene un residuo de 0 se agrega a la lista de multiplos y la retorna. Se piden los valores separados por espacios como *STR* luego la variables "valores" sera dicho valor separado y ya como un entero, la variable multiplos sera la funcion inicial evaluada en "valores" y se imprimen los multiplos de 3 que se encuentran en la lista que se ingreso.
 
 ````python
+#funcion que crea una lista vacia y analiza si son o no multiplos de 3 los datos
 def multiplos_de_tres(lista):
     multiplos = []
     for num in lista:
@@ -373,14 +374,13 @@ def multiplos_de_tres(lista):
         multiplos.append(num)
     return multiplos
 
-# Solicitar al usuario que ingrese valores y crear la lista
+#pedir los numeros separados por espacio y hacer cada valor un dato independiente
 entrada = input("Ingresa los valores de la lista separados por espacios: ")
 valores = [int(valor) for valor in entrada.split()]
 
-# Encontrar los múltiplos de 3 en la lista ingresada
+#usa la funcion en la lista creada
 multiplos = multiplos_de_tres(valores)
 
-# Imprimir los múltiplos de 3
 print("Los múltiplos de 3 en la lista son:", multiplos)
 
 ````
@@ -388,6 +388,8 @@ print("Los múltiplos de 3 en la lista son:", multiplos)
 ## Punto 10.B:
 
 ## SOLUCION
+### Codigo sin usar modulo (%)
+
 
 ````python
 #funcion definiendo los multiplos de 3 previamente
