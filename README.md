@@ -9,6 +9,8 @@ Desarrollar un programa que ingrese un número entero n y separe todos los digit
 
 ## SOLUCION
 
+Primero se hizo una funcion para crear una lista de str, independientemente de que los datos ingresados sean enteros, usando append se agrega cada valor de cada str como un entero a una lista, ya cuando se ingresa el valor se llama a la funcion "lista" y se imprime el resultado, que seria una lista con cada uno se los digitos del entero como valores de la lista 
+
 ````python
 #funcion para convertir los int en str y una lista vacia
 def lista(numero):
@@ -34,12 +36,14 @@ Desarrollar un programa que ingrese un número flotante n y separe su parte ente
 
 ## SOLUCION
 
+El procedimiento es basicamente el mismo del anterior punto, primero se hizo una funcion para crear una lista de str y luego usando el comando split se separa el valor en el punto (ya que este es el que separa un la parte entera de la decimal en los reales), se define que la primera parte [0] en python, sea la parte entera y la parte 2 [1] en python sea la decimal, esta con un condicional que si su largo es menor a 1 (ya que es un str) su valor es 0, ya al ingresar el real se separa y se imprimen las 2 listas por separado.
+
 ````python
 #funcion que convuierte el int en un str
 def lista(numero):
   num_str = str(numero)
     
-    #separa el numero donde se encuntre el "." para separar la parte entera de la decimal
+  #separa el numero donde se encuntre el "." para separar la parte entera de la decimal
   partes = num_str.split(".")
     
   entero = partes[0]
@@ -66,6 +70,7 @@ print("Los digitos de la parte decimal es:", lista_decimal)
 Desarrollar un programa que permita ingresar dos números enteros y determinar si se tratan de números espejos, definiendo números espejos como dos números a y b tales que a se lee de izquierda a derecha igual que se lee b de derecha a izquierda, y viceversa.
 
 ## SOLUCION
+Se crea una funcion para convertir ambos numeros en strs, despues se condiciono para determinar si es o no espejo, esto se hizo comparando el primer valor con la inversa del otro y viceversa, si se cumplen que son iguales retorna True, de lo contrario False. Se ingresan ambos valores por separado y luego si la funcion espejo evaluada en ambos numeros da True imprime que son numeros espejos, sino que no lo son.
 
 ````python
 #funcion para convertir los 2 numeros en str
@@ -94,6 +99,9 @@ else:
 Diseñar una función que permita calcular una aproximación de la función coseno alrededor de 0 para cualquier valor x (real), utilizando los primeros n términos de la serie de Taylor. nota: use math para traer la función coseno y mostrar la diferencia entre el valor real y la aproximación. Calcule con cuántos términos de la serie (i.e: cuáles valores de n), se tienen errores del 10%, 1%, 0.1% y 0.001%.
 
 ## SOLUCION
+Se importa math, despues se define una funcion para hallar la aproximaxion de coseno, donde se genera un ciclo para generar la secuencia y opeararla hasta que se llegue al resultado, luego se se genera la difeerencia con la parte real usando cosen(x) menos el valor absoluto de la funcion. 
+Ahora se define la funcion para los terminos necesarios para arrojar error donde mientras la variable error sea mayor que los maximo permitido se opere el valor n con la aproximacion de coseno. 
+Solo se pide que ingresen un real, se definen los errores que se desean encontar. para imprimir la respuesta se usa el ciclo for, para los errores oermitidos en errores deseados, el error maximo es error permitido // 100, ya que se busca en porcentaje de determina el valor maximo en n, la diferecia y se imprime hasta acabar el for.
 
 ````python
 import math
@@ -142,6 +150,9 @@ for error_per in errores_deseados:
 Desarrollar un programa que permita determinar el Minimo Comun Multiplo de dos numeros enteros. Abordar el problema desde una perpectiva tanto iterativa como recursiva. Pista: Puede ser de utilidad chequear el Algoritmo de Euclides para el cálculo del Máximo Común Divisor, y revisar cómo se relaciona este último con el Mínimo Común Múltiplo.
 
 ## SOLUCION
+### ITERATIVA
+Se creo una funcion para el maximo comun divisor MCD donde mientras el segundo valor sea (a y b = a % b) retorna a y una funcion para el minimo comun multiplo MCM donde retorne siempre ((a * b) // MCD(a, b)), simplemente se piden los 2 numero y se entrega el resultado que seria MCM evaluado en los 2 numeros.
+
 ````python
 #ITERATIBA
 
@@ -167,6 +178,8 @@ print(f"El mcm de {num1} y {num2} es {resultado}")
 ## Punto 5.B:
 
 ## SOLUCION
+### RECURSIVA
+Aca la funcion del MCD se define que si b == 0 retorne a y que asu vez retorne MCD(b, a % b) se define de igual manera al anterior punto la funcion MCM con ((a * b) // mcd(a, b)). Simplemente se piden los 2 numero y se entrega el resultado que seria MCM evaluado en los 2 numeros.
 
 ````python
 #RECURSIVA
@@ -194,6 +207,7 @@ print(f"El mcm de {num1} y {num2} es {resultado}")
 Desarrollar un programa que determine si en una lista existen o no elementos repetidos. Pista: Maneje valores booleanos y utilice el operador in.
 
 ## SOLUCION
+Se define una funcion para determinar cuales son los valores repetidos en la lista con una vacia para poder agregar cualquiera. para cada elemento de la lista, si el elemento esta en elementos unicos retorna True, de lo contrario False, se solcitan los elemento separados con espacios y se separan cada uno en elemetos con "split", se define la variable de elementos repetidos con la funcion inicial y si se cumple que hay elementos repetidos se imprime que hay y sino pues que no hay. 
 
 ````python
 #funcion que reconoce los numeros repetidos con una lista vacia para almacenarlos
@@ -227,6 +241,7 @@ else:
 Desarrollar un programa que determine si en una lista se encuentra una cadena de caracteres con dos o más vocales. Si la cadena existe debe imprimirla y si no existe debe imprimir 'No existe'.
 
 ## SOLUCION
+Se define una funcion para saber cuales son las vocales en la cadena de caracteres con un contador para saber cuantas hay, para las letra en la cadena, si la letra see encuentra dentro de las vocales se agrega uno al contador, si didcho contador llega a ser igual o mayor a 2 retorne True, sino Flase. Se pide que ingrese su cadena de caracteres u incluso una oracion y genera la variable "cadenas" separan cada valor ingresado, luego se imprimen para la cadena en las cadenas ingresadas si la funcion de las vocales evalualada en cadena coinciden pues imprimir dichos valor
 
 ````python
 #funcion que define cuales son las vocales
@@ -260,6 +275,7 @@ for cadena in cadenas:
 Desarrollar un programa que dadas dos listas determine que elementos tiene la primer lista que no tenga la segunda lista. 
 
 ## SOLUCION
+Se define la funcion de elementos que seran los repetidos evaluado en 2 listas que retorne cada elemento para elemento en la lista 1 si dicho elemento no esta en la lista 2, es decir que retorne lo que no esta en la lista 1 y no en la 2, se piden las 2 listas, se define la variable de " no comunes con la funcion definida y se imprimen para los elemento en no comunes/compartidos imprimir dicho elemento.
 
 ````python
 #funcion para reconocer los elementos de la 1ra lista que no estan en la 2da
@@ -284,6 +300,7 @@ for elemento in no_comunes:
  Resolver el punto 7 del [taller 1](https://github.com/fegonzalez7/pdc_unal_clase8) usando operaciones con vectores.
 
 ## SOLUCION
+Se define cada una de las operaciones requeridas usando funciones, cada una de ellas evaluadas en los 5 valores que se necesitan y que retornen dicha operacion (aclarar que ya previamente habia realizado el trabajo usando vectores en el taller 1 para la maypria de las operaciones asique decidi dejar las que se podian igual aunque hubieran metodos mas sencillos), se piden los 5 valores reales, se crean variables segun la funcion requerida y se imprime el resultado de cada una, otra aclaracion es que por fines de proximacion algunas repuestan tienen limitados la cantida de decimales que pueden imprimir. 
 
 ````python
 #funciones de todas las operaciones que se requieren
@@ -345,25 +362,26 @@ print(f"{cub:.5f} es la raíz cúbica del menor")
 Suponga que se tiene una lista A con ciertos números enteros. Desarrolle una función que, independientemente de los números que se encuentran en la lista A, tome aquellos números que son múltiplos de 3 y los guarde en una lista nueva, la cual debe ser **retornada** por la función. Implemente la perspectiva de un *patrón de acumulación* y también de *comprensión de listas*. **Desafío:** Si ya lo logró, inténtelo ahora sin utilizar el módulo (%). **Pista:** Un número es multiplo de 3 si la suma de sus dígitos también lo es
 
 ## SOLUCION
+### codigo sin resticciones
+Se define una funcion para saber los multiplos de 3 en una lista, para los numeros en la lista si dicho numero dividido entre 3 tiene un residuo de 0 se agrega a la lista de multiplos y la retorna. Se piden los valores separados por espacios como *STR* luego la variables "valores" sera dicho valor separado y ya como un entero, mu
 
 ````python
-#funcion que crea una lista vacia y analiza si son o no multiplos de 3 los datos
 def multiplos_de_tres(lista):
-  multiplos = []
-  for num in lista:
-    if num % 3 == 0:
-      multiplos.append(num)
-  return multiplos
+    multiplos = []
+    for num in lista:
+      if num % 3 == 0:
+        multiplos.append(num)
+    return multiplos
 
-#pedir los numeros separados por espacio y hacer cada valor un dato independiente
+# Solicitar al usuario que ingrese valores y crear la lista
 entrada = input("Ingresa los valores de la lista separados por espacios: ")
 valores = [int(valor) for valor in entrada.split()]
 
-#usa la funcion en la lista creada
+# Encontrar los múltiplos de 3 en la lista ingresada
 multiplos = multiplos_de_tres(valores)
 
-#resultado
-print("Los múltiplos de 3 en la lista son:", multiplos_de_tres)
+# Imprimir los múltiplos de 3
+print("Los múltiplos de 3 en la lista son:", multiplos)
 
 ````
 
