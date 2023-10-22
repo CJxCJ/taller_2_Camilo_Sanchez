@@ -1,7 +1,7 @@
 #funcion definiendo los multiplos de 3 previamente
 def multiplo_de_tres(numero):
   suma = sum(int(digito) for digito in str(numero))
-  return suma in {0, 3, 6, 9}
+  return suma in {0, 3, 6, 9, 12, 15, 18, 21}
 
 #funcion para hallar los multplos de 3 (ya definidos) en la lista
 def encontrar_multiplos(lista):
