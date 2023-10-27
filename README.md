@@ -241,7 +241,7 @@ else:
 Desarrollar un programa que determine si en una lista se encuentra una cadena de caracteres con dos o más vocales. Si la cadena existe debe imprimirla y si no existe debe imprimir 'No existe'.
 
 ## SOLUCION
-Se define una funcion para saber cuales son las vocales en la cadena de caracteres con un contador para saber cuantas hay, para las letra en la cadena, si la letra see encuentra dentro de las vocales se agrega uno al contador, si didcho contador llega a ser igual o mayor a 2 retorne True, sino Flase. Se pide que ingrese su cadena de caracteres u incluso una oracion y genera la variable "cadenas" separan cada valor ingresado, luego se imprimen para la cadena en las cadenas ingresadas si la funcion de las vocales evalualada en cadena coinciden pues imprimir dichos valor
+Se define una funcion para saber cuales son las vocales en la cadena de caracteres con un contador para saber cuantas hay, para las letra en la cadena, si la letra se encuentra dentro de las vocales se agrega uno al contador, si didcho contador llega a ser igual o mayor a 2 retorne True, sino Flase. Se pide que ingrese su cadena de caracteres u incluso una oracion y genera la variable "cadenas" separan cada valor ingresado con split, luego se imprimen para la cadena en las cadenas ingresadas si la funcion de las vocales evalualada en cadena coinciden pues imprimir dichos valores
 
 ````python
 #funcion que define cuales son las vocales
@@ -275,7 +275,7 @@ for cadena in cadenas:
 Desarrollar un programa que dadas dos listas determine que elementos tiene la primer lista que no tenga la segunda lista. 
 
 ## SOLUCION
-Se define la funcion de elementos que seran los repetidos evaluado en 2 listas que retorne cada elemento para elemento en la lista 1 si dicho elemento no esta en la lista 2, es decir que retorne lo que no esta en la lista 1 y no en la 2, se piden las 2 listas, se define la variable de " no comunes con la funcion definida y se imprimen para los elemento en no comunes/compartidos imprimir dicho elemento.
+Se define la funcion de elementos que seran los repetidos evaluado en 2 listas que retorne cada elemento para elemento en la lista 1 si dicho elemento no esta en la lista 2, es decir que retorne lo que no esta en la lista 1 y no en la 2, se piden las 2 listas con .SPLIT para separar cada valor ingresado, se define la variable de no comunes con la funcion definida y se imprimen para los elemento en no comunes/compartidos imprimir dicho elemento.
 
 ````python
 #funcion para reconocer los elementos de la 1ra lista que no estan en la 2da
@@ -363,7 +363,7 @@ Suponga que se tiene una lista A con ciertos números enteros. Desarrolle una fu
 
 ## SOLUCION
 ### Codigo sin resticciones
-Se define una funcion para saber los multiplos de 3 en una lista, para los numeros en la lista si dicho numero dividido entre 3 tiene un residuo de 0 se agrega a la lista de multiplos y la retorna. Se piden los valores separados por espacios como *STR* luego la variables "valores" sera dicho valor separado y ya como un entero, la variable multiplos sera la funcion inicial evaluada en "valores" y se imprimen los multiplos de 3 que se encuentran en la lista que se ingreso.
+Se define una funcion para saber los multiplos de 3 en una lista, para los numeros en la lista si dicho numero dividido entre 3 tiene un residuo de 0 se agrega a la lista de multiplos y la retorna. Se piden los valores separados por espacios como *STR* separdos con SPLIT luego la variables "valores" sera dicho valor separado y ya como un entero, la variable multiplos sera la funcion inicial evaluada en "valores" y se imprimen los multiplos de 3 que se encuentran en la lista que se ingreso.
 
 ````python
 #funcion que crea una lista vacia y analiza si son o no multiplos de 3 los datos
