@@ -300,7 +300,7 @@ for elemento in no_comunes:
  Resolver el punto 7 del [taller 1](https://github.com/fegonzalez7/pdc_unal_clase8) usando operaciones con vectores.
 
 ## SOLUCION
-Se define cada una de las operaciones requeridas usando funciones, cada una de ellas evaluadas en los 5 valores que se necesitan y que retornen dicha operacion (aclarar que ya previamente habia realizado el trabajo usando vectores en el taller 1 para la maypria de las operaciones asique decidi dejar las que se podian igual aunque hubieran metodos mas sencillos), se piden los 5 valores reales, se crean variables segun la funcion requerida y se imprime el resultado de cada una, otra aclaracion es que por fines de proximacion algunas repuestan tienen limitados la cantida de decimales que pueden imprimir. 
+Se define cada una de las operaciones requeridas usando funciones, cada una de ellas evaluadas en los 5 valores que se necesitan y que retornen dicha operacion, donde se operan los elementos de la lista para generar una soluvion para ellos (aclarar que ya previamente habia realizado el trabajo usando vectores en el taller 1 para la mayoria de las operaciones asi que decidi dejar las que se podian igual aunque hubieran metodos mas sencillos), se piden los 5 valores reales, se crean variables segun la funcion requerida y se imprime el resultado de cada una, otra aclaracion es que por fines de proximacion algunas repuestan tienen limitados la cantida de decimales que pueden imprimir. 
 
 ````python
 #funciones de todas las operaciones que se requieren
